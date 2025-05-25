@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "nav"
+    "filtros"
+    "principal"
+    "footer";
+  gap: 10px;
+  background-color: antiquewhite;
+}
+
+/* Barra Navegación*/
+.nav {
+  grid-area: nav;
+  display: flex;
+  padding: 10px 20px;
+  background-color: #d0dc47;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav h1 {
+  color: azure;
+  text-shadow: 80%;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.nav li {
+  display: none;
+}
+
+.nav i {
+  color: white;
+}
+
+/* Filtros de busqueda */
+
+.filtros {
+  grid-area: filtros;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 10px 10px;
+  align-items: center;
+}
+
+.filtros select {
+  padding: 5px 20px;
+  width: 80%;
+}
+
+/* Productos*/
+
+.principal {
+  grid-area: principal;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  gap: 10px;
+}
+
+.producto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  background-color: azure;
+}
+
+.producto img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+}
+
+.producto h2 {
+  font-size: small;
+}
+
+.producto button {
+  width: 100%;
+  background-color: #f6b4f6;
+  border: none;
+  color: azure;
+  padding: 10px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.buttons button {
+  border: 1px solid black;
+  padding: 5px;
+}
+
+/* Footer */
+
+.footer {
+  grid-area: footer;
+  background-color: #d0dc47;
+  text-align: center;
+  padding: 10px 20px;
+}
